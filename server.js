@@ -3,6 +3,7 @@
 // modules ==============================================
 var express = require('express');
 var app = express();
+var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 
@@ -16,7 +17,7 @@ var port = process.env.PORT || 8080;
 
 // connect to the mongodb database
 // uncomment once you have added your credentials to the config file
-// mongoose.connect(db.url);
+ mongoose.connect(db.url);
 
 // get all data of the body of a POST
 // parse application/json
